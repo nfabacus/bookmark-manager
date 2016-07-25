@@ -28,3 +28,19 @@ I would like to filter links by a tag.
 | user          | add tags to links     |
 | user          | filter links by a tag |
 | user          | see links in descending chronological order |
+
+
+What is CRUD?
+
+CRUD is an acronym for create, read, update and delete. CRUD is the four basic functions of persistent storage. It is a way to interact with databases.
+
+What is SQL?
+
+SQL is a structured query language. It lets you access and manipulate databases. It is used by relational databases.
+
+| Operation|SQL|
+|----------|---|
+|Create | INSERT|
+|Read | SELECT|
+|Update | UPDATE|
+|Delete | DELETE|
