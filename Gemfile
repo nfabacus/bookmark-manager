@@ -10,6 +10,7 @@ gem "rspec-sinatra"
 gem "rack-test"
 gem "capybara"
 gem "sinatra"
+gem 'rake'
 
 
 
