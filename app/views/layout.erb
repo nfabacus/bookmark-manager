@@ -1,0 +1,11 @@
+<html>
+<head>
+  <title> Bookmark Manager </title>
+</head>
+
+<body> <% if current_user %>
+  Welcome, <%= current_user.e_mail %>
+  <%end %>
+  <%= yield %>
+</body>
+</html>

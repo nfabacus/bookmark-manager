@@ -11,6 +11,7 @@ gem "rack-test"
 gem "capybara"
 gem "sinatra"
 gem 'rake'
+gem 'bcrypt'
 
 
 
