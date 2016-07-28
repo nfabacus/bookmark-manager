@@ -52,14 +52,12 @@ feature 'filter links' do
 end
 
 feature 'create user account' do
-  before do
+  scenario 'I can sign up as a new user' do
     visit '/sign-up'
     fill_in 'username', with: 'Fran'
     fill_in 'email', with: 'fran@makers.com'
     fill_in 'password', with: 'guitar1234'
-  end
-  scenario 'I can sign up as a new user' do
-    user = User.create(email: 'fran@makers.com', password: 'guitar1234')
+    fill_in 'password_confirmation', with: 'guitar1234'
     expect{ click_button 'signup' }.to change(User, :count).by(1)
     expect(page).to have_content('Welcome, Fran')
     expect(User.first.email).to eq('fran@makers.com')
