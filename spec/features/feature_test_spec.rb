@@ -63,4 +63,14 @@ feature 'create user account' do
     expect(User.first.email).to eq('fran@makers.com')
   end
 
+  scenario 'I can not sign up without entering an email' do
+    visit '/sign-up'
+    fill_in 'username', with: 'Fran'
+    fill_in 'email', with: ''
+    fill_in 'password', with: 'guitar1234'
+    fill_in 'password_confirmation', with: 'guitar1234'
+    expect { click_button 'signup' }.not_to change(User, :count)
+    expect(current_path).to eq('/newuser')
+    expect(page).to have_content("Please enter your email address.")
+  end
 end
