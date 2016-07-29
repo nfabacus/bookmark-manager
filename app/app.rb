@@ -5,9 +5,11 @@ require_relative 'data_mapper_setup'
 
 
 class BookmarkManager < Sinatra::Base
+  use Rack::MethodOverride
   enable :sessions
   set :session_secret, 'super secret'
   register Sinatra::Flash
+
 
   helpers do
     def current_user
@@ -88,16 +90,12 @@ class BookmarkManager < Sinatra::Base
       flash.now[:errors] = ['The email or password is incorrect']
       erb :sign_in
     end
-    # @user = User.all.select{params[:email]}
-    # puts "user: #{@user}"
-    # puts "password_digest #{@user[0].password_digest}"
-    # if @user[0].password_digest == User.password(params[:password])
-    #   give_token
-    #   redirect '/links'
-    # else
-    #   redirect_to home_url
-    # end
+  end
 
+  delete '/sessions' do
+    session[:user_id] = nil
+    flash.keep[:notice] = 'You are signed out. Good bye!'
+    redirect '/links'
   end
 
   # start the server if ruby file executed directly
