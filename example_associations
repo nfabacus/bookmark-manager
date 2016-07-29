@@ -1,0 +1,13 @@
+class Link
+
+has n, :taggings
+has n, :tags, :through => :taggings
+
+class Tag
+
+has n, :taggings
+has n, :links, :through => taggings
+
+class Tagging
+
+belongs_to :tag
