@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-# ookmark Manager
-=======
-# README.md
 
-## User Stories: Bookmark Manager
+# Bookmark Manager
 
+## User Stories
+```
 As a time-pressed user
 So that I can quickly go to web sites I regularly visit
 I would like to see a list of links on the homepage
-
-As a time-pressed user
-So that I can quickly find web sites I recently bookmarked
-I would like to see links in descending chronological order
 
 As a time-pressed user
 So that I can save a website
@@ -25,11 +19,4 @@ As a time-pressed user
 So that I can quickly find links on a particular topic
 I would like to filter links by tag
 
-main page
-
-page where sites are stored
-
-post adding sites to list
-
-tags as params
->>>>>>> saturday
+```
